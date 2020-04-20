@@ -16,6 +16,7 @@ package task.task05.task0502;
 •	Метод должен возвращать одно и тоже значение, если мы деремся с одним и тем же котом.
 •	Если некий кот1 выигрывает у кота кот2, то кот2 должен проигрывать коту кот1.*/
 
+
 /*
 Реализовать метод fight
 */
@@ -25,15 +26,16 @@ public class Cat {
     public int weight;
     public int strength;
 
-
     public Cat() {
     }
-
     public boolean fight(Cat anotherCat) {
+        int ageScore = Integer.compare(this.age, anotherCat.age);
+        int weightScore = Integer.compare(this.weight, anotherCat.weight);
+        int strengthScore = Integer.compare(this.strength, anotherCat.strength);
 
-        return false;
+        int score = ageScore + weightScore + strengthScore;
+        return score > 0; // return score > 0 ? true : false;
     }
-
 
     public static void main(String[] args) {
         Cat cat1 = new Cat();
@@ -47,7 +49,6 @@ public class Cat {
         cat2.strength = 12;
 
         System.out.println(cat1.fight(cat2));
-        System.out.println(cat2.fight(cat1));
     }
 }
 
