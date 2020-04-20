@@ -1,4 +1,4 @@
-package task.task0518;
+package task.task05.task0518;
 
 /*Создать класс Dog (собака) с тремя конструкторами:
 - Имя
