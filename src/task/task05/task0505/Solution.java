@@ -19,6 +19,12 @@ public class Solution {
 
     public static void main(String[] args) {
         //напишите тут ваш код
+        Cat cat1 = new Cat("Vasyka", 15, 1000, 100);
+        Cat cat2 = new Cat("Vasyka1", 12, 2000, 120);
+        Cat cat3 = new Cat("Vasyk2", 13, 1500, 130);
+        System.out.println(cat1.fight(cat2));
+        System.out.println(cat1.fight(cat3));
+        System.out.println(cat2.fight(cat3));
     }
 
     public static class Cat {
